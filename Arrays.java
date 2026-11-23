@@ -1,40 +1,25 @@
-import java.util.Scanner;
 public class Arrays {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("enter the size of the array");
-        int size = sc.nextInt();
-        int arr[] = new int[size];
-
-        int sum =0;
-
-        System.out.println("enter the elements of array:");
-        for(int i = 0;i<size;i++)
-        {
-            arr[i]=sc.nextInt();
-            sum +=arr[i];
-
-        }
-        int min = arr[0];
-        int max = arr[0];
-
-        for(int i = 0; i<size;i++)
-        {
-            if(arr[i]<min)
+        int age=20;
+        double height=1.674d;
+        String Name = "Pranay";
+        char Blood = 'O';
+        int numbers[]={1,2,3,4,5,6,7,8,9,10};
+        int even_num[]=new int[5];
+        int count=0;
+        int odd_num[]=new int[5];
+        int count_odd=0;
+        for (int i = 0; i < numbers.length; i++) {
+            if(numbers[i]%2==0)
             {
-                min=arr[i];
-
+                even_num[count]=numbers[i];
+                count+=1;
             }
-            if(arr[i]>max)
+            else
             {
-                max=arr[i];
+               odd_num[count]=numbers[i];
+                count_odd+=1;
             }
-
         }
-        System.out.println("min"+min);
-        System.out.println("max"+max);
-        System.out.println("average"+(sum/size));
-
-
     }
 }
